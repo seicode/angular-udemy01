@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import * as faker from 'faker/locale/en';
+import { lorem } from 'faker/locale/en_US';
 
 @Component({
-  selector: 'typing-root',
+  selector: 'app-typing',
   templateUrl: './typing.component.html',
   styleUrls: ['./typing.component.css']
 })
 export class TypingComponent {
-  randomText = faker.lorem.sentence(4);
+  randomText = lorem.sentence(4);
   enteredText = '';
 
   compare(randomLetter: string, enteredLetter: string) {
