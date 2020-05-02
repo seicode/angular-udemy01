@@ -18,16 +18,28 @@ export class PagesComponent implements OnInit {
       url: '/assets/tree.jpeg'
     },
     {
-      title: 'Mountain',
+      title: 'Snowy mountain',
       url: '/assets/mountain.jpeg'
     },
     {
       title: 'Biking',
       url: '/assets/biking.jpeg'
+    },
+    {
+      title: 'Earrings',
+      url: '/assets/chitenge01.jpg'
+    },
+    {
+      title: 'Pouch',
+      url: '/assets/chitenge02.jpg'
+    },
+    {
+      title: 'Sun flowers',
+      url: '/assets/himawari.jpg'
     }
   ];
 
-  getClass() {
-    const classes = [];
+  checkWindowIndex(index: number) {
+    return Math.abs(this.currentPage - index) < 3;
   }
 }

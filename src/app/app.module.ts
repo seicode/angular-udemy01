@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TypingComponent } from './typing/typing.component';
 import { PagesComponent } from './pages/pages.component';
 import { PwGeneratorComponent } from './pw-generator/pw-generator.component';
+import { ClassDirective } from './class.directive';
+import { TimesDirective } from './times.directive';
 
 const appRoutes: Routes = [
   { path: 'pw-generator', component: PwGeneratorComponent },
@@ -19,7 +21,9 @@ const appRoutes: Routes = [
     AppComponent,
     TypingComponent,
     PagesComponent,
-    PwGeneratorComponent
+    PwGeneratorComponent,
+    ClassDirective,
+    TimesDirective
   ],
   imports: [
     BrowserModule,
