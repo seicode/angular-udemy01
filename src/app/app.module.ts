@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ElementsModule } from './elements/elements.module';
+import { CollectionsModule } from './collections/collections.module';
 
 import { AppComponent } from './app.component';
 import { TypingComponent } from './typing/typing.component';
@@ -28,7 +30,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule
+    NgbModule,
+    ElementsModule,
+    CollectionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
