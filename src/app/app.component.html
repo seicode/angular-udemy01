@@ -1,13 +1,13 @@
-<ul class="nav">
-  <li class="nav-item">
-    <a routerLink="/pw-generator" class="nav-link active">Pass Word Generator</a>
-  </li>
-  <li class="nav-item">
-    <a routerLink="/typing" class="nav-link">Typing Game</a>
-  </li>
-  <li class="nav-item">
-    <a routerLink="/pages" class="nav-link">Pages</a>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<div class="ui container">
+  <div class="ui secondary pointing menu">
+    <a routerLink="/" class="item">Home</a>
+    <a routerLink="/pw-generator" routerLinkActive="active" class="item">Pass Word Generator</a>
+    <a routerLink="/typing" routerLinkActive="active" class="item">Typing Game</a>
+    <a routerLink="/pages" routerLinkActive="active" class="item">Pages</a>
+    <a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
+    <a routerLink="/collection" routerLinkActive="active" class="item">Collections</a>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
