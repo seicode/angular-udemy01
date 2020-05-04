@@ -21,6 +21,14 @@ const appRoutes: Routes = [
   { path: 'pages', component: PagesComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent },
+  {
+    path: '',
+    loadChildren: () => import('./elements/elements.module').then(m => m.ElementsModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./collections/collections.module').then(m => m.CollectionsModule)
+  }
 ];
 
 @NgModule({
