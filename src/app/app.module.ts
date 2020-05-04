@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ElementsModule } from './elements/elements.module';
 import { CollectionsModule } from './collections/collections.module';
+import { ViewsModule } from './views/views.module';
+import { ModsModule } from './mods/mods.module';
 
 import { ClassDirective } from './class.directive';
 import { TimesDirective } from './times.directive';
@@ -28,6 +30,14 @@ const appRoutes: Routes = [
   {
     path: '',
     loadChildren: () => import('./collections/collections.module').then(m => m.CollectionsModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./views/views.module').then(m => m.ViewsModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./mods/mods.module').then(m => m.ModsModule)
   }
 ];
 
@@ -47,6 +57,8 @@ const appRoutes: Routes = [
     NgbModule,
     ElementsModule,
     CollectionsModule,
+    ViewsModule,
+    ModsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
