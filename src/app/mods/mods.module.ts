@@ -13,6 +13,9 @@ import { ModalComponent } from './modal/modal.component';
     CommonModule,
     ModsRoutingModule,
     SharedModule
+  ],
+  exports: [
+    ModalComponent
   ]
 })
 export class ModsModule { }
